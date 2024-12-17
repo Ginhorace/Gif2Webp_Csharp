@@ -24,6 +24,7 @@ jobs:
         
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
       run: |
         dotnet build --configuration Release --no-restore
@@ -36,7 +37,7 @@ jobs:
         path: .\bin\Release\net8.0-windows\win-x64\publish\
 
     - name: Create release 
-    - uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with:
         artifacts: "*.zip"
         token: ${{ github.token }}
