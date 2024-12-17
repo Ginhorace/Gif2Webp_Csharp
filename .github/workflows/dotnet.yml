@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: gif2webp
-        path: publish
+        path: .\bin\Release\net8.0-windows\win-x64\publish\
             
